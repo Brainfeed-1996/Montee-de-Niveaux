@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Tâches Informatique</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Défis Informatique</h1>
+            <p>Gagne des points d'expérience et monte de niveau !</p>
+        </header>
+
+        <section class="profile">
+            <h2>Profil</h2>
+            <p><strong>Niveau :</strong> <span id="user-level">1</span></p>
+            <p><strong>Expérience :</strong> <span id="user-xp">0</span> / <span id="xp-needed">100</span></p>
+        </section>
+
+        <section class="tasks">
+            <h2>Tâches Disponibles</h2>
+            <ul id="task-list">
+                <!-- Les tâches seront ajoutées ici via JavaScript -->
+            </ul>
+        </section>
+    </div>
+    <div class="auth-container">
+      <h2>Connexion</h2>
+      <form id="login-form">
+          <label for="username">Nom d'utilisateur :</label>
+          <input type="text" id="username" name="username" required>
+          
+          <label for="password">Mot de passe :</label>
+          <input type="password" id="password" name="password" required>
+  
+          <button type="submit">Se connecter</button>
+      </form>
+  
+      <p>Pas encore inscrit ? <a href="#" id="register-link">S'inscrire</a></p>
+  
+      <form id="register-form" style="display: none;">
+          <label for="new-username">Nom d'utilisateur :</label>
+          <input type="text" id="new-username" name="username" required>
+  
+          <label for="new-password">Mot de passe :</label>
+          <input type="password" id="new-password" name="password" required>
+  
+          <button type="submit">S'inscrire</button>
+      </form>
+      <button onclick="logout()">Déconnexion</button>
+
+  </div>
+  
+
+    <script src="app.js"></script>
+    <div id="root"></div>
+</body>
+</html>
